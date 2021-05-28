@@ -1,0 +1,169 @@
+<!Doctype HTML>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css"href="../CSS/QnA.css"><meta charset="UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    
+  </head>
+<body>
+   <div id="adjust">
+<h2 class ="container">Ask a public question</h2><br>
+<div class="container" id="full" >
+    <form>
+        <div id="s">
+    <div class="form-group" >
+<label><b>Title</b></label><br>
+<label>Be specific and imagine you're asking a question to another person</label><br>
+<input type="text" class="form-control input-lg" id="inputlg" placeholder="e.g.Is there an R function for finding the index of an element in a vector?" style="width:95%;">
+</div>
+<br>
+<div class="form-group">
+<label><b>Body</b></label><br>
+<label>Include all the information someone would need to answer your question</label><br>
+<div id="f">
+    <div id="div1">
+   <span class="glyphicon glyphicon-bold" id="icons"></span>
+   <span class="glyphicon glyphicon-italic" id="icons"></span>
+   <span class="glyphicon glyphicon-link" id="icons"></span>
+   <span class="glyphicon glyphicon-picture" id="icons"></span>
+   <span class="glyphicon glyphicon-list" id="icons"></span>
+   <span class="glyphicon glyphicon-align-center" id="icons"></span>
+   <input type="button" value="Hide formatting tips" id="hide">
+    </div>
+    <hr>
+   <div id="div2">
+    <ul class="list-inline">
+        <li><a href="#"  data-toggle="popover" data-placement="bottom" data-content="Use angle brackets to force linking
+            <https://stackoverflow.com>
+            Create inline text links with Markdown
+            
+            [Text](https://stackoverflow.com)
+            Add alt attributes to links by adding a double space and text after the URL
+            
+            [Text](https://stackoverflow.com  this text appears on mouseover)">Links</a></li>
+        <li><a href="#" data-toggle="popover" data-placement="bottom" data-content="Add inline images
+
+            ![Text](https://stackoverflow.com/image.jpg)">Images</a></li>
+        <li><a href="#"  data-toggle="popover" data-placement="bottom" data-content="Use some text styling to make your post more readable
+
+            Line breaks: double space or <br /> at the end of each line
+            Italics: *asterisks* or _underscores_
+            Bold: **double asterisks** or __double underscores__
+            Create sections with headers
+            
+            A Large Header
+            ==============
+            
+            Smaller Subheader
+            -----------------
+            Use hash marks for multiple levels of headers
+            
+            # Header 1 #
+            ## Header 2 ##
+            ### Header 3 ###">Styling/Headers</a></li>
+        <li><a href="#" data-toggle="popover" data-placement="bottom" data-content="Create bulleted and numbered lists
+
+            - Create bullets with minus sign
+            + or plus sign
+            * or an asterisk
+            1. or sequential numbers
+            Use 4 or 8 spaces to create nested lists
+            
+            1. List item
+                - Item A, four spaces
+                    * Item B, eight spaces">Lists</a></li>
+        <li><a href="#" data-toggle="popover" data-placement="bottom" data-content="Add > to the beginning of each line to create a blockquote
+
+            > A standard blockquote is indented
+            > > A nested blockquote is indented more
+            > > > > You can nest to any depth.">Blockquotes</a></li>
+        <li><a href="#" data-toggle="popover" data-placement="bottom" data-content="Create code fences by placing your code between sets of 3 backticks ` or use CTRL + K
+
+            ```
+            like so
+            ```
+            Create inline code spans by placing text between single backticks
+            
+            `like so`
+            Add a preformatted block within a list with eight spaces
+            
+            1. This is normal text
+            2. This is a list item
+             
+                    Skip a line and indent eight spaces.
+                    Eight spaces will trigger the code block.">Code</a></li>
+        <li><a href="#"  data-toggle="popover" data-placement="bottom" data-content="Use HTML in combination with Markdown (What's supported? Note: We advise against mixing HTML and Markdown.)
+
+            <strike>Markdown works * fine* in here.</strike>
+            Block-level HTML elements have restrictions
+            
+            1. Use blank lines to separate them from surrounding text
+            2. The opening and closing tags of the outermost block elements must not be indented
+            
+            <pre>
+                You <em>cannot</em> use Markdown here
+            </pre>">HTML</a></li>
+        <li><a href="#" data-toggle="popover" data-placement="bottom" data-content="Create tables using the GitHub-flavored markdown format
+
+            | A header | Another header |
+            | -------- | -------------- |
+            | First    | row            |
+            | Second   | row            |
+            A header row is required and must be followed by a separator row with the same number of cells. Cells are separated by a pipe (|) symbol.
+            
+            Set the alignment of a table column by placing a : on the left, right, or both sides of a separator in the separator line
+            
+            | left | center | right |
+            |:---- |:------:| -----:|
+            | One  | Two    | Three |">Tables</a></li>
+      </ul>
+   </div> 
+   <script>
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();   
+    });
+    </script>
+    <textarea class="form-control" rows="8"  id="comment" style="width :100%;"></textarea>
+
+</div>
+</div>
+<button >Code</button>
+<i>**bold**</i>
+<i>*italic*</i>
+<i>>quote</i>
+<br>
+<div class="form-group">
+    <label><b>Tags</b></label><br>
+    <label>Add up to 5 tags to describe what your question is about</label> <a href="#" data-toggle="popover"  data-content="How to tag
+    Tags help the right people find and answer your question.
+    
+    Identify your tags by completing the sentence, My question is about…
+    Include tags that are crucial to your question only, like c#
+    Only include version numbers, like c#-4.0, when absolutely necessary
+    Use existing popular tags
+    If you can’t find a tag:
+    Create new tags or post without it and ask the community to create one for you."><span class="glyphicon glyphicon-question-sign" id="quesSign"></span></a><br>
+    <input type="text" class="form-control input-lg" id="inputlg" placeholder="e.g.(ruby-on-rails angular spring)" style="width:95%;"></div>
+</div>
+<div class="container">
+    <button type="button" class="btn btn-primary" id="lastbutton">Review your question</button>
+</div>
+</form>
+</div>
+<!-- <div class="container">
+    <button type="button" class="btn btn-primary" id="lastbutton">Review your question</button>
+</div> -->
+</div>
+
+
+</div> 
+</body>
+</html>
